@@ -14,6 +14,9 @@
 <body>
     <nav class="navbar">
         <a href="#" class="logo">portfolio.</a>
+        <div class="menu-icon" id="menu-icon">
+  <i class='bx bx-menu'></i>
+        </div>
         <ul>
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -61,4 +64,13 @@
             </div>
         </div>
     </section>
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navLinks = document.querySelector('.navbar ul');
+
+  menuIcon.onclick = () => {
+    navLinks.classList.toggle('active');
+    menuIcon.firstElementChild.classList.toggle('bx-x');
+  };
+</script>
 </html>
